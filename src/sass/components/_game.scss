@@ -1,0 +1,152 @@
+.game {
+	background-color: #ffffff;
+	border-radius: 10px;
+	width: 90%;
+	margin: 1em auto 0;
+	padding: 1em 1em 3em;
+	position: relative;
+}
+
+.game__header {
+	background-color: #dfeeff;
+	padding: 1em;
+	border-radius: 10px 10px 0 0;
+	margin-bottom: 2em;
+}
+
+.game__header__title {
+	display: inline-block;
+	margin-right: 0.5em;
+}
+
+.game__screen {
+	padding: 1em;
+	.game__screen {
+		padding: 0;
+	}
+}
+
+.game__reset {
+	display: inline-block;
+	background-color: #0ac0f2;
+	color: #ffffff;
+	text-decoration: none;
+	padding: 1em;
+	border-radius: 10px;
+	margin-top: 4em;
+}
+
+.game__title {
+	margin-bottom: 1em;
+}
+
+.game__options {
+	list-style-type: none;
+	padding: 0;
+	width: 90%;
+	margin: 3em auto 0;
+}
+
+.game__link {
+	display: block;
+	padding: 1em;
+	border: solid 5px #093051;
+	border-radius: 1em;
+	margin-top: 2em;
+	color: #093051;
+	text-decoration: none;
+	&:hover {
+		border-color: #0ac0f2;
+		background-color: #0ac0f2;
+		color: #ffffff;
+	}
+}
+
+.game__items {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.game__item {
+	box-sizing: border-box;
+	background-color: #093051;
+	border-radius: 10px;
+	color: #ffffff;
+	padding: 1em;
+	margin: 0.5em;
+	cursor: pointer;
+	width: 100%;
+	@media screen and (min-width: 30em){
+		width: calc( 50% - 1em );
+	}
+	@media screen and (min-width: 50em){
+		width: calc( 33.333% - 1em );
+	}
+	&:hover {
+		background-color: #0ac0f2;
+	}
+	.game__title {
+		text-align: center;
+		text-transform: uppercase;
+	}
+}
+
+.game__src {
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+}
+
+.game__players {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.game__player {
+	box-sizing: border-box;
+	margin: 1em;
+	text-align: center;
+	width: 100%;
+	@media screen and (min-width: 30em){
+		width: calc( 50% - 2em );
+	}
+}
+
+.game__result {
+	background-color: #eeeeee;
+	color: #093051;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+    width: 50%;
+    margin: 1em auto;
+    padding: 2em;
+    border-radius: 10px;
+}
+
+.counter {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    width: 50%;
+    margin-top: -5%;
+    margin-left: -25%;
+    padding: 2em;
+    border-radius: 10px;
+    z-index: 2;
+    box-sizing: border-box;
+    background-color: #eeeeee;
+    color: #093051;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+}
+
+.js .game__screen {
+  display: none;
+}
+
+.js .game__screen--start,
+.js .game__screen--selection {
+  display: block;
+}

@@ -1,0 +1,24 @@
+body {
+	background-color: #ecf1f4;
+	color: #093051;
+	margin: 0;
+	font-family: 'Asap', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+
+.link {
+	display: inline-block;
+	color: #0ac0f2;
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+	}
+}

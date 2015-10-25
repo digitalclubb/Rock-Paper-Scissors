@@ -1,0 +1,165 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+	<title></title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+	<link href='https://fonts.googleapis.com/css?family=Asap:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+	<!--
+
+		DESCRIPTION
+
+		- Future iterations could include scoring, multiplayer (webrtc?!), image recognition & speech to text.
+		- Used Sass, broken down into components and base. Better architecture for bigger projects.
+		- Left JS in main.js but would normally break this into components folders too.
+		- Normally use load-grunt-config, installed libSass and autoprefixer.
+		- Cross browser tested back to IE8 with progressive enhancement (flexbox!).
+		- A little unclear on 'reset' AC but took that to mean return to menu.
+
+	-->
+
+	<div class="game">
+
+		<header class="game__header">
+			<h2 class="game__header__title">Rock Paper Scissors</h2>
+			<a href="https://en.wikipedia.org/wiki/Rock-paper-scissors" target="_blank" class="link">(how to play)</a>
+		</header>
+
+		<!--
+			First Screen for mode selection
+		-->
+		<section id="start" class="game__screen game__screen--start">
+
+			<h3 class="game__title">How would you like to play?</h3>
+
+			<ul class="game__options js-options">
+				<li class="game__option"><a href="#single" class="game__link">Single Player</a></li>
+				<li class="game__option"><a href="#auto" class="game__link">Automatic</a></li>
+			</ul>
+
+		</section>
+
+
+		<!--
+			Single player vs Computer mode
+		-->
+		<section id="single" class="game__screen">
+
+			<h3 class="game__title">Single Player</h3>
+
+			<div class="game__screen game__screen--selection">
+
+				<h4 class="game__title">What would you like to be?</h4>
+
+				<div class="game__items">
+
+					<article class="game__item js-item" data-item="rock">
+						<h5 class="game__title">Rock</h5>
+						<figure>
+							<img src="img/rock.png" class="game__src" alt="Rock icon" />
+						</figure>
+					</article>
+
+					<article class="game__item js-item" data-item="paper">
+						<h5 class="game__title">Paper</h5>
+						<figure>
+							<img src="img/paper.png" class="game__src" alt="Paper icon" />
+						</figure>
+					</article>
+
+					<article class="game__item js-item" data-item="scissors">
+						<h5 class="game__title">Scissors</h5>
+						<figure>
+							<img src="img/scissors.png" class="game__src" alt="Scissors icon" />
+						</figure>
+					</article>
+
+				</div> <!-- /.game__items -->
+
+			</div> <!-- ./game__screen__selection -->
+
+			<div class="game__screen game__screen--result">
+
+				<!-- Content updated via JavaScript -->
+				<div class="js-result game__result"><span class="js-player"></span></div>
+
+				<div class="game__players">
+
+					<article class="game__player" data-player="one">
+						<h5 class="game__title">You (Player 1)</h5>
+						<div class="card">
+							<div class="card__front"></div>
+							<div class="card__back">
+								<div class="card__result"></div>
+							</div>
+						</div>
+					</article>
+
+					<article class="game__player" data-player="two">
+						<h5 class="game__title">Computer (Player 2)</h5>
+						<div class="card">
+							<div class="card__front"></div>
+							<div class="card__back">
+								<div class="card__result"></div>
+							</div>
+						</div>
+					</article>
+
+				</div> <!-- /.game__players -->
+
+			</div> <!-- /.game__screen__result -->
+
+			<a href="#start" class="game__reset js-reset">Back to main menu</a>
+
+		</section>
+
+
+		<!--
+			Computer vs Computer mode
+		-->
+		<section id="auto" class="game__screen">
+
+			<h3 class="game__title">Automatic</h3>
+
+			<!-- Content updated via JavaScript -->
+			<div class="js-result game__result"><span class="js-player"></span></div>
+
+			<div class="game__players">
+
+				<article class="game__player" data-player="one">
+					<h5 class="game__title">Player 1</h5>
+					<div class="card">
+						<div class="card__front"></div>
+						<div class="card__back">
+							<div class="card__result"></div>
+						</div>
+					</div>
+				</article>
+
+				<article class="game__player" data-player="two">
+					<h5 class="game__title">Player 2</h5>
+					<div class="card">
+						<div class="card__front"></div>
+						<div class="card__back">
+							<div class="card__result"></div>
+						</div>
+					</div>
+				</article>
+
+			</div> <!-- /.game__players -->
+
+			<a href="#start" class="game__reset js-reset">Back to main menu</a>
+
+		</section>
+
+	</div>
+
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="js/main.js" async></script>
+</body>
+</html>
